@@ -28,6 +28,14 @@ const Home = () => {
             <p>Detect edges using 1D or 2D convolution operators</p>
             <button className="tool-button">Open Tool</button>
           </div>
+
+          <div className="tool-card" onClick={() => navigate('/greyscale')}>
+            <div className="tool-icon">📐</div>
+            <h3>Image Greyscale</h3>
+            <p>Detect edges using 1D or 2D convolution operators</p>
+            <button className="tool-button">Open Tool</button>
+          </div>
+
         </div>
       </section>
 
