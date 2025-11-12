@@ -8,32 +8,29 @@ const Home = () => {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>Image Processing Tool</h1>
-        <p className="subtitle">Explore the power of image convolution</p>
+        <h1 className="jersey-10-regular">Image Processing Tool</h1>
+        <p className="subtitle jersey-10-regular">Explore the power of image convolution</p>
+        <h2 className="jersey-10-regular">Select a Tool</h2>
       </header>
 
       <section className="tools-section">
-        <h2>Select a Tool</h2>
         <div className="tools-grid">
           <div className="tool-card" onClick={() => navigate('/blur')}>
-            <div className="tool-icon">🔲</div>
-            <h3>Image Blur</h3>
-            <p>Apply Gaussian blur using convolution kernels</p>
-            <button className="tool-button">Open Tool</button>
+            <h3 className="tool-name blur-effect audiowide-regular">Image Blur</h3>
+            <p className="jersey-10-regular">Apply Gaussian blur using convolution kernels</p>
+            <button className="tool-button audiowide-regular">Open Tool</button>
           </div>
 
           <div className="tool-card" onClick={() => navigate('/edge-detection')}>
-            <div className="tool-icon">📐</div>
-            <h3>Edge Detection</h3>
-            <p>Detect edges using 1D or 2D convolution operators</p>
-            <button className="tool-button">Open Tool</button>
+            <h3 className = "tool-name edge-effect audiowide-regular">Edge Detection</h3>
+            <p className="jersey-10-regular">Detect edges using 1D or 2D convolution operators</p>
+            <button className="tool-button audiowide-regular">Open Tool</button>
           </div>
 
           <div className="tool-card" onClick={() => navigate('/greyscale')}>
-            <div className="tool-icon">📐</div>
-            <h3>Image Greyscale</h3>
-            <p>Detect edges using 1D or 2D convolution operators</p>
-            <button className="tool-button">Open Tool</button>
+            <h3 className = "tool-name greyscale-effect audiowide-regular">Image Greyscale</h3>
+            <p className="jersey-10-regular">Converts RGB pixel values to a weighted sum</p>
+            <button className="tool-button audiowide-regular">Open Tool</button>
           </div>
 
         </div>

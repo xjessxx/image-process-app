@@ -1,6 +1,10 @@
 .home-container {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 150vh;
+  /*background: linear-gradient(135deg, #b6f5ad 0%, #aae3f5 100%);*/
+   background: url('background9.png');
+   background-repeat: no-repeat;
+   background-size: 1700px;
+   background-position: center top;
 }
 
 .home-header {
@@ -13,6 +17,25 @@
   font-size: 3.5rem;
   margin-bottom: 15px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.home-header h2 {
+  margin-top: 40px;  
+  font-size: 2rem;
+  color: white;
+}
+
+/*fonts*/
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .subtitle {
@@ -41,13 +64,30 @@
 }
 
 .tool-card {
-  background: white;
-  border-radius: 16px;
-  padding: 40px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  
+  /* Shadows for depth */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  
+  /* Spacing */
+  padding: 30px;
+}
+
+.tool-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  pointer-events: none;
 }
 
 .tool-card:hover {
@@ -67,27 +107,79 @@
 }
 
 .tool-card p {
-  color: #666;
-  font-size: 1.1rem;
+  color: #ede4e4;
+  font-size: 1.4rem;
   margin-bottom: 25px;
+  text-align:center;
   line-height: 1.6;
 }
 
 .tool-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* Glassmorphic background */
+  background: linear-gradient(135deg, 
+    rgba(102, 126, 234, 0.3) 0%, 
+    rgba(118, 234, 180, 0.3) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* Glass border */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
+  /* Text color */
   color: white;
-  border: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  
   padding: 12px 30px;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  display: block;
+  margin: 20px auto 0;
 }
 
 .tool-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, 
+    rgba(102, 126, 234, 0.5) 0%, 
+    rgba(118, 234, 180, 0.5) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.tool-name {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.blur-effect {
+  color: #667eea;
+  text-shadow: 0 0 8px rgba(102, 126, 234, 0.8);
+  filter: blur(0.5px);
+}
+
+.edge-effect {
+  color: #667eea;
+  text-shadow: 
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff,
+    -2px -2px 0 #fff,
+     2px -2px 0 #fff,
+    -2px  2px 0 #fff,
+     2px  2px 0 #fff;
+}
+
+.greyscale-effect {
+  background: linear-gradient(90deg, #151515, #5f5d5d, #9e9c9c, #fff);  /* Lighter colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
 }
 
 .education-section {

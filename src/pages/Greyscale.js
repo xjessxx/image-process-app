@@ -69,9 +69,9 @@ export default function ImageGreyscale() {
     const dctx = dst.getContext("2d");
     dctx.clearRect(0, 0, dst.width, dst.height);
 
-    // map 1-100% -
+    // map 1–100% -> 0.5–20px
     const pct = Math.max(1, Math.min(100, GreyscalePct));
-    dctx.filter = `grayscale(${pct}%)`; //canvas css filter
+    dctx.filter = `grayscale(${pct}%)`;
     dctx.drawImage(src, 0, 0);
     dctx.filter = "none";
 
