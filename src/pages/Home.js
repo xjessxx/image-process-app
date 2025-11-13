@@ -33,6 +33,25 @@ const Home = () => {
             <button className="tool-button audiowide-regular">Open Tool</button>
           </div>
 
+          <div className="tool-card" onClick={() => navigate('/sharpen')}>
+            <h3 className="tool-name audiowide-regular">Sharpen Filter</h3>
+            <p className="jersey-10-regular">Enhance edges and details using convolution</p>
+            <button className="tool-button audiowide-regular">Open Tool</button>
+          </div>
+
+          <div className="tool-card" onClick={() => navigate('/sepia')}>
+            <h3 className="tool-name audiowide-regular">Sepia Filter</h3>
+            <p className="jersey-10-regular">Apply a warm vintage film tone</p>
+            <button className="tool-button audiowide-regular">Open Tool</button>
+          </div>
+
+          <div className="tool-card" onClick={() => navigate('/posterize')}>
+            <h3 className="tool-name audiowide-regular">Posterize Filter</h3>
+            <p className="jersey-10-regular">Apply a fun filter to make your picture look like a cartoon</p>
+            <button className="tool-button audiowide-regular">Open Tool</button>
+          </div>
+
+
         </div>
       </section>
 
