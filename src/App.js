@@ -7,6 +7,7 @@ import ImageGreyscale from './pages/Greyscale';
 import Sharpen from './pages/Sharpen';
 import Sepia from './pages/Sepia';
 import Posterize from './pages/Posterize';
+import Emboss from './pages/Emboss';
 
 
 
@@ -24,6 +25,8 @@ function App() {
           <Route path="/sharpen" element={<Sharpen />} />
           <Route path="/sepia" element={<Sepia />} />
           <Route path="/posterize" element={<Posterize />} />
+          <Route path="/emboss" element={<Emboss />} />
+
 
 
         </Routes>

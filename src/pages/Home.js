@@ -51,6 +51,12 @@ const Home = () => {
             <button className="tool-button audiowide-regular">Open Tool</button>
           </div>
 
+          <div className="tool-card" onClick={() => navigate('/emboss')}>
+            <h3 className="tool-name emboss-effect audiowide-regular">Emboss Filter</h3>
+            <p className="jersey-10-regular">Emphasize the differences of pixels in a given direction.</p>
+            <button className="tool-button audiowide-regular">Open Tool</button>
+          </div>
+
 
         </div>
       </section>

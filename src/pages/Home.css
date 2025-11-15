@@ -174,6 +174,13 @@
      2px  2px 0 #fff;
 }
 
+.emboss-effect {
+  color: #a0a0a0;
+  text-shadow: 
+    -2px -2px 0 rgba(255, 255, 255, 0.8),
+     1px  1px 0 rgba(0, 0, 0, 0.3);
+}
+
 .greyscale-effect {
   background: linear-gradient(90deg, #151515, #5f5d5d, #9e9c9c, #fff);  /* Lighter colors */
   -webkit-background-clip: text;
