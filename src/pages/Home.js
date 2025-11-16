@@ -57,6 +57,12 @@ const Home = () => {
             <button className="tool-button audiowide-regular">Open Tool</button>
           </div>
 
+          <div className="tool-card" onClick={() => navigate('/hueRotation')}>
+            <h3 className="tool-name hue-rotation-effect-animated audiowide-regular">Hue Rotation Filter</h3>
+            <p className="jersey-10-regular">Rotate the hue degree of any picture.</p>
+            <button className="tool-button audiowide-regular">Open Tool</button>
+          </div>
+
 
         </div>
       </section>

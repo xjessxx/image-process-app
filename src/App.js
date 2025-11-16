@@ -8,6 +8,7 @@ import Sharpen from './pages/Sharpen';
 import Sepia from './pages/Sepia';
 import Posterize from './pages/Posterize';
 import Emboss from './pages/Emboss';
+import HueRotation from './pages/hueRotation';
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/sepia" element={<Sepia />} />
           <Route path="/posterize" element={<Posterize />} />
           <Route path="/emboss" element={<Emboss />} />
+          <Route path="/hueRotation" element={<HueRotation />} />
 
 
 
