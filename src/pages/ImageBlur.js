@@ -119,7 +119,7 @@ export default function ImageBlur() {
     img.src = imageSrc;
   }, [imageSrc]);
 
-  return (
+    return (
     <div className="image-blur-container">
       <header className="tool-header">
         <button className="back-button" onClick={() => navigate("/")}>
