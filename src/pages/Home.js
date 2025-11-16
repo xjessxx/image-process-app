@@ -30,8 +30,8 @@ const Home = () => {
             <p className="jersey-10-regular">Detect edges using 1D or 2D<br /> convolution operators</p>
             <button className="tool-button audiowide-regular">Open Tool</button>
             <div className="tool-card-images">
-              <img src="original.png" alt="Original" className="tool-card-image original" />
-              <img src="blurred.png" alt="Blurred" className="tool-card-image processed" />
+              <img src="/edge-original.png" alt="Original" className="tool-card-image original" />
+              <img src="/edge-detected-image.png" alt="Blurred" className="tool-card-image processed" />
             </div>
           </div>
 
@@ -40,38 +40,38 @@ const Home = () => {
             <p className="jersey-10-regular">Converts RGB pixel values<br /> to a weighted sum</p>
             <button className="tool-button audiowide-regular">Open Tool</button>
             <div className="tool-card-images">
-              <img src="original.png" alt="Original" className="tool-card-image original" />
-              <img src="blurred.png" alt="Blurred" className="tool-card-image processed" />
+              <img src="/greyscale-original.png" alt="Original" className="tool-card-image original" />
+              <img src="/greyscaled-image.png" alt="Blurred" className="tool-card-image processed" />
             </div>
           </div>
 
           <div className="tool-card" onClick={() => navigate('/sharpen')}>
-            <h3 className="tool-name audiowide-regular">Sharpen Filter</h3>
+            <h3 className="tool-name sharpen-effect audiowide-regular">Sharpen Filter</h3>
             <p className="jersey-10-regular">Enhance edges and details<br /> using convolution</p>
             <button className="tool-button audiowide-regular">Open Tool</button>
             <div className="tool-card-images">
-              <img src="original.png" alt="Original" className="tool-card-image original" />
-              <img src="blurred.png" alt="Blurred" className="tool-card-image processed" />
+              <img src="/sharpen-original.png" alt="Original" className="tool-card-image original" />
+              <img src="/sharpen-image.png" alt="Blurred" className="tool-card-image processed" />
             </div>
           </div>
 
           <div className="tool-card" onClick={() => navigate('/sepia')}>
-            <h3 className="tool-name audiowide-regular">Sepia Filter</h3>
+            <h3 className="tool-name sepia-effect audiowide-regular">Sepia Filter</h3>
             <p className="jersey-10-regular">Apply a warm vintage film tone</p>
             <button className="tool-button audiowide-regular">Open Tool</button>
             <div className="tool-card-images">
-              <img src="original.png" alt="Original" className="tool-card-image original" />
+              <img src="/sepia-origninal.png" alt="Original" className="tool-card-image original" />
               <img src="blurred.png" alt="Blurred" className="tool-card-image processed" />
             </div>
           </div>
 
           <div className="tool-card" onClick={() => navigate('/posterize')}>
-            <h3 className="tool-name audiowide-regular">Posterize Filter</h3>
+            <h3 className="tool-name posterize-effect audiowide-regular">Posterize Filter</h3>
             <p className="jersey-10-regular">Apply a fun filter to make your<br /> picture look like a cartoon</p>
             <button className="tool-button audiowide-regular">Open Tool</button>
             <div className="tool-card-images">
-              <img src="original.png" alt="Original" className="tool-card-image original" />
-              <img src="blurred.png" alt="Blurred" className="tool-card-image processed" />
+              <img src="/posterize-original.png" alt="Original" className="tool-card-image original" />
+              <img src="/posterized-image.png" alt="Blurred" className="tool-card-image processed" />
             </div>
           </div>
 
@@ -80,18 +80,18 @@ const Home = () => {
             <p className="jersey-10-regular">Emphasize the differences of <br />pixels in a given direction.</p>
             <button className="tool-button audiowide-regular">Open Tool</button>
             <div className="tool-card-images">
-              <img src="original.png" alt="Original" className="tool-card-image original" />
-              <img src="blurred.png" alt="Blurred" className="tool-card-image processed" />
+              <img src="/embossed-original.png" alt="Original" className="tool-card-image original" />
+              <img src="/embossed-image.png" alt="Blurred" className="tool-card-image processed" />
             </div>
           </div>
 
           <div className="tool-card" onClick={() => navigate('/hueRotation')}>
-            <h3 className="tool-name hue-rotation-effect-animated audiowide-regular">Hue Rotation Filter</h3>
+            <h3 className="tool-name hue-rotation-effect-animated audiowide-regular">Hue Rotation<br /> Filter</h3>
             <p className="jersey-10-regular">Rotate the hue degree of any <br />picture.</p>
             <button className="tool-button audiowide-regular">Open Tool</button>
             <div className="tool-card-images">
-              <img src="original.png" alt="Original" className="tool-card-image original" />
-              <img src="blurred.png" alt="Blurred" className="tool-card-image processed" />
+              <img src="/hue-original.png" alt="Original" className="tool-card-image original" />
+              <img src="/hue-rotated-image.png" alt="Blurred" className="tool-card-image processed" />
             </div>
           </div>
 

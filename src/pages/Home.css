@@ -112,14 +112,14 @@
 
 .tool-card-images {
   position: relative;
-  width: 300px;
+  width: 250px;
   height: 200px;
   align-self: flex-end;  
   margin-top: -200px;  
 }
 
 .tool-card-image {
-  width: 300px;
+  width: 250px;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
@@ -253,6 +253,35 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+}
+
+.posterize-effect {
+  color: #ff6b9d;
+  text-shadow: 
+    2px 2px 0 #4ecdc4,
+    4px 4px 0 #ffe66d,
+    4px 4px 0 #ff6b9d;
+  font-weight: bold;
+}
+
+.sharpen-effect {
+  color: #667eea;
+  text-shadow: 
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #667eea,
+    0 0 4px #667eea,
+    1px 1px 0 rgba(0, 0, 0, 0.8);
+  filter: contrast(1.5);
+}
+
+.sepia-effect {
+  color: #ebba64;
+  text-shadow: 
+    1px 1px 0 #8b6f47,
+    2px 2px 0 #6b5638,
+    3px 3px 2px rgba(98, 69, 29, 0.712);
+  filter: sepia(0.8);
 }
 
 .education-section {
