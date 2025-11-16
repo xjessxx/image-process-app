@@ -3,7 +3,7 @@
   /*background: linear-gradient(135deg, #b6f5ad 0%, #aae3f5 100%);*/
    background: url('background9.png');
    background-repeat: no-repeat;
-   background-size: 1700px;
+   background-size: 2500px;
    background-position: center top;
 }
 
@@ -46,7 +46,7 @@
 .home-container .tools-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px 20px 150px 20px;
 }
 
 .home-container .tools-section h2 {
@@ -58,9 +58,9 @@
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-bottom: 60px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .tool-card {
@@ -76,18 +76,15 @@
   
   /* Spacing */
   padding: 30px;
-}
-
-.tool-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  pointer-events: none;
+  
+  /* Make entire card clickable */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .tool-card:hover {
@@ -95,10 +92,60 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-.tool-icon {
-  font-size: 4rem;
-  margin-bottom: 20px;
+.tool-card-content {
+  flex: 1;
 }
+
+.tool-name {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: left; 
+}
+
+.tool-card p {
+  color: #ede4e4;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  text-align: left; 
+  line-height: 1.6;
+}
+
+.tool-card-images {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  align-self: flex-end;  
+  margin-top: -200px;  
+}
+
+.tool-card-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tool-card-image.original {
+  opacity: 1;
+}
+
+.tool-card-image.processed {
+  opacity: 0;
+}
+
+.tool-card:hover .tool-card-image.original {
+  opacity: 0;
+}
+
+.tool-card:hover .tool-card-image.processed {
+  opacity: 1;
+}
+
+
 
 .tool-card h3 {
   font-size: 1.8rem;
@@ -106,13 +153,7 @@
   margin-bottom: 15px;
 }
 
-.tool-card p {
-  color: #ede4e4;
-  font-size: 1.4rem;
-  margin-bottom: 25px;
-  text-align:center;
-  line-height: 1.6;
-}
+
 
 .tool-button {
   /* Glassmorphic background */
@@ -137,7 +178,8 @@
   transition: all 0.3s ease;
 
   display: block;
-  margin: 20px auto 0;
+  margin: 20px 0 0 0;
+  width: fit-content;
 }
 
 .tool-button:hover {
@@ -149,11 +191,7 @@
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.tool-name {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  text-align: center;
-}
+
 
 .blur-effect {
   color: #667eea;
