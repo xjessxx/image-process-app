@@ -83,7 +83,7 @@ export default function Sepia() {
       const sepiaR = Math.min((0.393 * r + 0.769 * g + 0.189 * b) * 1.18, 255);
       const sepiaG = Math.min((0.349 * r + 0.686 * g + 0.168 * b) * 1.05, 255);
       const sepiaB = Math.min((0.272 * r + 0.534 * g + 0.131 * b) * 0.88, 255);
-
+  
       // interpolate between original and sepia
       data[i]     = r + (sepiaR - r) * intensity;
       data[i + 1] = g + (sepiaG - g) * intensity;

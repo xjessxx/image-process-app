@@ -74,11 +74,12 @@ export default function ImagePosterize() {
   const imageData = sctx.getImageData(0, 0, src.width, src.height);
   const data = imageData.data;
   const levels = Math.round(2 + ((100 - blurPct) / 100) * 62);
+
  
   const step = 255 / (levels - 1);
 
   for (let i = 0; i < data.length; i += 4) {
-    data[i]     = Math.round(data[i]     / step) * step; // R
+    data[i]     = Math.round(data[i] / step) * step; // R
     data[i + 1] = Math.round(data[i + 1] / step) * step; // G
     data[i + 2] = Math.round(data[i + 2] / step) * step; // B
   }

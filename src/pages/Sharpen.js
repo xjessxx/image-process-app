@@ -56,7 +56,7 @@ export default function ImageSharpen() {
 
 
 
-const applyBlur = () => {
+const applySharpen = () => {
   if (!imageSrc) {
     alert("Upload an image first.");
     return;
@@ -90,7 +90,7 @@ const applyBlur = () => {
   const side = 3;
   const halfSide = 1;
 
-  const intensity = blurPct / 50; // 50% = normal, 100% = strong, 1% = weak
+  const intensity = blurPct /80; // 50% = normal, 100% = strong, 1% = weak
   const scaledKernel = kernel.map(k => k * intensity);
 
   for (let y = 0; y < src.height; y++) {
@@ -197,7 +197,7 @@ const applyBlur = () => {
               value={blurPct}
               onChange={handleBlurInput}
             />
-            <button className="go-button" onClick={applyBlur} disabled={!imageSrc}>
+            <button className="go-button" onClick={applySharpen} disabled={!imageSrc}>
               Go
             </button>
           </div>
