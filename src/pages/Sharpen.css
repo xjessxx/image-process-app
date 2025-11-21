@@ -1,0 +1,185 @@
+/* MAIN CONTAINER */
+.sharpen-container {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #0d0f17 0%, #1b1e2a 40%, #13141b 100%);
+  position: relative;
+}
+
+/* Vignette */
+.sharpen-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.8) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* HEADER */
+.sharpen-container .tool-header {
+  text-align: center;
+  color: #e8ddff;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.sharpen-container .tool-header h1 {
+  font-family: "Georgia", serif;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.sharpen-container .tool-header p {
+  font-size: 1.2rem;
+}
+
+/* BACK BUTTON */
+.sharpen-container .back-button {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+.sharpen-container .back-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* CONTENT */
+.sharpen-container .tool-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* UPLOAD CONTROLS */
+.sharpen-container .upload-controls {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.sharpen-container .controls-left,
+.sharpen-container .controls-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Upload Button */
+.sharpen-container .custom-file-upload {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #4b4f5c 0%, #7d8494 100%);
+  color: #ececec;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.sharpen-container .custom-file-upload:hover {
+  background: linear-gradient(135deg, #6a7080 0%, #aab3c4 100%);
+  box-shadow: 0 0 15px rgba(170,210,255,0.4);
+  transform: translateY(-2px);
+}
+
+.sharpen-container input[type="file"] {
+  display: none;
+}
+
+/* INTENSITY INPUT */
+.sharpen-container .controls-right input[type="number"] {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 2px solid #b8a9ff;
+  width: 120px;
+  background: rgba(255,255,255,0.8);
+}
+
+/* GO BUTTON */
+.sharpen-container .go-button {
+  padding: 12px 35px;
+  border-radius: 6px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #5ab19c 0%, #439c84 100%);
+  color: #0b0b0c;
+  border: 1px solid rgba(0,255,200,0.4);
+  transition: 0.25s;
+}
+
+.sharpen-container .go-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #576b67 0%, #00c98e 100%);
+  box-shadow: 0 0 18px rgba(0,255,200,0.6);
+}
+
+/* IMAGE GRID */
+.sharpen-container .images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+/* IMAGE BOXES */
+.sharpen-container .image-box {
+  background: linear-gradient(135deg, #1c1e26, #0e0f13);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 8px rgba(255,255,255,0.05), 0 10px 25px rgba(0,0,0,0.45);
+  padding: 25px;
+  text-align: center;
+}
+
+.sharpen-container .image-box h3 {
+  color: #ddd0ff;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.sharpen-container .image-box canvas {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* DOWNLOAD BUTTON */
+.sharpen-container .download-button {
+  background: linear-gradient(135deg, #636975 0%, #8e96a6 100%);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #e6e6e6;
+  border-radius: 6px;
+  padding: 10px 24px;
+  transition: 0.25s;
+}
+
+.sharpen-container .download-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #a5afc1 0%, #ccd3df 100%);
+  box-shadow: 0 0 12px rgba(200,210,255,0.4);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .sharpen-container .back-button {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .sharpen-container .images-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./ImageBlur.css";
+import "./Posterize.css";
 
 export default function ImagePosterize() {
   const navigate = useNavigate();
@@ -130,8 +130,8 @@ export default function ImagePosterize() {
     img.src = imageSrc;
   }, [imageSrc]);
 
-  return (
-    <div className="image-blur-container">
+    return (
+    <div className="posterize-container">
       <header className="tool-header">
         <button className="back-button" onClick={() => navigate("/")}>
           ← Back to Home
@@ -168,12 +168,12 @@ export default function ImagePosterize() {
           </div>
         </div>
 
-        {/* Canvases are always mounted so refs aren’t null */}
         <div className="images-container">
           <div className="image-box">
             <h3>Original</h3>
             <canvas ref={originalCanvasRef} />
           </div>
+
           <div className="image-box">
             <h3>Processed</h3>
             <canvas ref={processedCanvasRef} />

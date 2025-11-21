@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./ImageBlur.css";
+import "./Sharpen.css";
 
 export default function ImageSharpen() {
   const navigate = useNavigate();
@@ -165,29 +165,28 @@ const applySharpen = () => {
     img.src = imageSrc;
   }, [imageSrc]);
 
-  return (
-    <div className="image-blur-container">
+    return (
+    <div className="sharpen-container">
       <header className="tool-header">
         <button className="back-button" onClick={() => navigate("/")}>
           ← Back to Home
         </button>
         <h1>Image Sharpen Tool</h1>
-        <p>Upload an image, set Sharpen intensity (1–100), and process.</p>
+        <p>Upload an image, adjust intensity (1–100), and process.</p>
       </header>
 
       <div className="tool-content">
-        <div className="upload-controls">
-          <label htmlFor="file-upload" className="custom-file-upload">
-            Choose Image
-          </label>
-          <input
-            id="file-upload"
-            type="file"
-            accept="image/*"
-            onChange={handleImageUpload}
-          />
 
-          <div className="blur-controls">
+        <div className="upload-controls">
+          
+          <div className="controls-left">
+            <label htmlFor="file-upload" className="custom-file-upload">
+              Choose Image
+            </label>
+            <input id="file-upload" type="file" accept="image/*" onChange={handleImageUpload} />
+          </div>
+
+          <div className="controls-right">
             <label htmlFor="blur-input">Sharpen Intensity: {blurPct}%</label>
             <input
               id="blur-input"
@@ -201,22 +200,19 @@ const applySharpen = () => {
               Go
             </button>
           </div>
+
         </div>
 
-        {/* Canvases are always mounted so refs aren’t null */}
         <div className="images-container">
           <div className="image-box">
             <h3>Original</h3>
             <canvas ref={originalCanvasRef} />
           </div>
+
           <div className="image-box">
             <h3>Processed</h3>
             <canvas ref={processedCanvasRef} />
-            <button
-              className="download-button"
-              disabled={!hasProcessed}
-              onClick={downloadProcessed}
-            >
+            <button className="download-button" disabled={!hasProcessed} onClick={downloadProcessed}>
               Download Sharpened Image
             </button>
           </div>

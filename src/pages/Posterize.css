@@ -1,0 +1,210 @@
+/* MAIN CONTAINER */
+.posterize-container {
+  min-height: 100vh;
+  padding: 20px;
+
+  background: linear-gradient(135deg, #27103d 0%, #512d6d 40%, #0f0f1d 100%);
+  position: relative;
+  color: #f0dfff;
+}
+
+/* Neon vignette */
+.posterize-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle,
+    rgba(255,0,150,0.12) 0%,
+    rgba(0,0,0,0.7) 100%
+  );
+  z-index: 1;
+}
+
+/* HEADER */
+.posterize-container .tool-header {
+  text-align: center;
+  color: #f8eaff;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.posterize-container .tool-header h1 {
+  font-family: 'Impact', 'Georgia', serif;
+  letter-spacing: 2px;
+  font-size: 2.8rem;
+  color: #ff9bff;
+  text-shadow: 0 0 15px rgba(255,100,255,0.7);
+}
+
+.posterize-container .tool-header p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* BACK BUTTON */
+.posterize-container .back-button {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid #ff79d3;
+  color: #ffe3ff;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.posterize-container .back-button:hover {
+  background: rgba(255,0,150,0.3);
+  box-shadow: 0 0 15px #ff58c4;
+}
+
+/* CONTENT */
+.posterize-container .tool-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+
+/* UPLOAD CONTROLS */
+.posterize-container .upload-controls {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,0,255,0.25);
+  border-radius: 14px;
+  padding: 25px;
+  backdrop-filter: blur(12px);
+  margin-bottom: 30px;
+
+  box-shadow: 0 0 25px rgba(255,0,200,0.25);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.posterize-container input[type="file"] {
+  display: none;
+}
+
+/* Choose Image Button */
+.posterize-container .custom-file-upload {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #ff5bbd, #ff80e6);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #ffb9ff;
+  transition: 0.3s;
+}
+
+.posterize-container .custom-file-upload:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px #ff8bf3;
+}
+
+/* INTENSITY LABEL + INPUT */
+.posterize-container .blur-controls label {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.posterize-container .blur-controls input[type="number"] {
+  padding: 10px 12px;
+  width: 120px;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 2px solid #8b5eff;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.posterize-container .blur-controls input[type="number"]:focus {
+  border-color: #d39bff;
+  box-shadow: 0 0 8px #d39bff;
+}
+
+/* GO BUTTON */
+.posterize-container .go-button {
+  padding: 12px 35px;
+  background: linear-gradient(135deg, #57e3ff, #54b0ff);
+  border: 2px solid #80d8ff;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.posterize-container .go-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #a1f0ff, #84c9ff);
+  box-shadow: 0 0 15px #8beaff;
+}
+
+.posterize-container .go-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* GRID */
+.posterize-container .images-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+/* IMAGE BOX */
+.posterize-container .image-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255,0,255,0.25);
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+
+  box-shadow: 0 0 25px rgba(160,70,255,0.2);
+}
+
+.posterize-container .image-box h3 {
+  font-size: 1.5rem;
+  color: #ffb5ff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255,100,255,0.6);
+}
+
+.posterize-container .image-box canvas {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,150,255,0.25);
+}
+
+/* DOWNLOAD BUTTON */
+.posterize-container .download-button {
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #5c67ff, #8d9aff);
+  border: 2px solid #c5caff;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.posterize-container .download-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #a4afff, #c8d0ff);
+  box-shadow: 0 0 12px #c5caff;
+}
+
+.posterize-container .download-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

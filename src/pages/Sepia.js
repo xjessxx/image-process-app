@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./ImageBlur.css"; 
+import "./sepia.css";
 
 export default function Sepia() {
   const navigate = useNavigate();
@@ -134,10 +134,9 @@ export default function Sepia() {
     };
     img.src = imageSrc;
   }, [imageSrc]);
-
-
-  return (
-    <div className="image-blur-container">
+  
+    return (
+    <div className="sepia-container">
       <header className="tool-header">
         <button className="back-button" onClick={() => navigate("/")}>
           ← Back to Home
