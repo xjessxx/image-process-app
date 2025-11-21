@@ -55,4 +55,4 @@ http://localhost:3000
 Each filter lives in its own JS & CSS file for isolated styling and clean separation 
 
 ## Aurthors
-Jessica McIlree & Lily Farr
+Jessica McIlree & Lily Farr (@lilcfar)
