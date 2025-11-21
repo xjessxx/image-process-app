@@ -1,5 +1,6 @@
 # Image Processing App
-*Access our hosted webpage here: *
+**Access our hosted webpage here:** 
+
 https://boisterous-cuchufli-d05088.netlify.app/
 
 # Description
