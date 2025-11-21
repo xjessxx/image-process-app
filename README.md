@@ -8,14 +8,24 @@ This is an interactive react application that allows users to upload an image an
 
 ## Features
 This web app allows users to apply the filters of
-Image Blur: Softens the image using pixel averaging
-Edge Detection: Highlights transitions for a sketched outlined look
-Image Greyscale: Removes all color for a black-and-white result
-Sharpen Filter: Enhances edges for a crisp, detailed look
-Sepia Filter: Applies a vintage warm-brown tone
-Posterize Filter: Reduces color depth for a stylized graphic effect
-Emboss Filter: Creates a raised/engraved relief effect
-Hue Rotation Filter: Shifts all colors around the hue spectrum
+
+
+- **Image Blur:** Softens the image using pixel averaging
+
+- **Edge Detection:** Highlights transitions for a sketched outlined look
+
+- **Image Greyscale:** Removes all color for a black-and-white result
+
+- **Sharpen Filter:** Enhances edges for a crisp, detailed look
+
+- **Sepia Filter:** Applies a vintage warm-brown tone
+
+- **Posterize Filter:** Reduces color depth for a stylized graphic effect
+
+- **Emboss Filter:** Creates a raised/engraved relief effect
+
+- **Hue Rotation Filter:** Shifts all colors around the hue spectrum
+
 
 Each filter has an adjustable options input and a download processed image button.
 
