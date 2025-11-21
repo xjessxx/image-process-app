@@ -58,20 +58,24 @@ The app will run at:
 http://localhost:3000
 
 ### File Structure
+```
 image-process-app/
 ├── public/
-│   └── index.html
-|    └── (all image files for homepage display)
+│   ├── index.html
+│   └── (all image files for homepage display)
+│
 ├── src/
 │   ├── pages/
 │   │   └── (a js and css page for each transformation tool)
 │   ├── App.jsx
 │   ├── App.css
-|   ├── index.css
+│   ├── index.css
 │   └── index.js
+│
 ├── package-lock.json
 ├── package.json
 └── README.md
+```
 
 Each filter lives in its own JS & CSS file for isolated styling and clean separation 
 
